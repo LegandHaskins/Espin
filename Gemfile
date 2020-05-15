@@ -22,7 +22,7 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 gem 'boostrap-sass', '~> 0.0.2'
 
-
+gem 'devise', '~> 4.7', '>= 4.7.1'
 
 
 
