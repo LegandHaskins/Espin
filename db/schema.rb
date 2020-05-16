@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_05_16_000222) do
 
-  create_table "commnets", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "message_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["message_id"], name: "index_commnets_on_message_id"
-    t.index ["user_id"], name: "index_commnets_on_user_id"
+    t.index ["message_id"], name: "index_comments_on_message_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2020_05_16_000222) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "commnets", "messages"
-  add_foreign_key "commnets", "users"
+  add_foreign_key "comments", "messages"
+  add_foreign_key "comments", "users"
 end
